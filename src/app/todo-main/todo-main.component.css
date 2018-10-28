@@ -1,0 +1,14 @@
+i{
+  font-size: 23px;
+}
+i:hover {
+  position: absolute;
+  cursor: pointer;
+  font-size: 25px;
+}
+td {
+  background-color: rgb(255, 255, 255);
+}
+input{
+  padding: 18px;
+}

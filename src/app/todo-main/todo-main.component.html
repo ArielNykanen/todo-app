@@ -1,0 +1,51 @@
+<h1 class="text-center">To Do App</h1>
+<h3 class="text-center">Add Note</h3>
+<input style="text-align: center;" type="text" [(ngModel)]='noteName' class="form-control">
+<div class="row">
+  <div align='center'>
+    <button class="btn btn-success" (click)="onAddNote()" [disabled]="!noteName">Add Note</button>
+  </div>
+</div>
+<table class="table">
+    <thead>
+      <tr>
+        <th></th>
+        <th>Notes</th>
+        <th>Date</th>
+        <th>Edit</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let note of notes; let noteId = index">
+        <td><input type="checkbox" (click)="onNoteRemove(noteId)" style="cursor:pointer"></td>
+        <td>{{ note.desc }}</td>
+        <td>{{ note.date }}</td>
+        <td><i class="fa fa-edit" (click)="onEdit(noteId)"></i></td>
+      </tr>      
+      <!-- <tr class="success">
+        <td>Success</td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+      </tr> -->
+      <!-- <tr class="danger">
+        <td>Danger</td>
+        <td>Moe</td>
+        <td>mary@example.com</td>
+      </tr>
+      <tr class="info">
+        <td>Info</td>
+        <td>Dooley</td>
+        <td>july@example.com</td>
+      </tr>
+      <tr class="warning">
+        <td>Warning</td>
+        <td>Refs</td>
+        <td>bo@example.com</td>
+      </tr>
+      <tr class="active">
+        <td>Active</td>
+        <td>Activeson</td>
+        <td>act@example.com</td>
+      </tr> -->
+    </tbody>
+  </table>

@@ -1,0 +1,18 @@
+<h1>Completed Notes</h1>
+<table class="table">
+    <thead>
+      <tr>
+        <th>Notes</th>
+        <th>Date</th>
+        <!-- <th>Edit</th> -->
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let note of completedNotes; let noteId = index" class="success">
+        <td>{{ note.desc }}</td>
+        <td>{{ note.date }}</td>
+        <td><i class="fa fa-remove" (click)="onRemoveCompletedNote(noteId)"></i></td>
+      </tr>      
+    
+    </tbody>
+  </table>
